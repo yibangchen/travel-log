@@ -1,0 +1,123 @@
+@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400);
+body {
+	background: #000;
+}
+a {
+	color: #ff0;
+}
+.cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+
+.cover .text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-family: 'Roboto Slab', serif;
+	font-size: 24px;
+	line-height: 0.8em;
+	text-align: center;
+}
+
+.temp {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-family: 'Roboto Slab', serif;
+	font-size: 24px;
+	line-height: 0.8em;
+	text-align: center;
+}
+
+.cover .control{
+	position: absolute;
+	top: 2%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;
+}
+
+.cover .control span {
+	color: #ff0;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.cover .control em {
+	font-style: normal;
+}
+.cover .control em.hidden {
+	display: none;
+}
+
+
+.tv {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.tv .screen {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	margin: auto;
+	opacity: 0;
+	transition: opacity .5s;
+}
+.tv .screen.active {
+	opacity: 1;
+}
+
+.button {
+	display: inline-block;
+	border-radius: 4px;
+	background-color: Transparent;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 20px;
+	padding: 20px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.cover .keywords{
+	position: absolute;
+	top: 90%;
+	width: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;
+}
