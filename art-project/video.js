@@ -4,6 +4,7 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var tv,
     playerDefaults = {autoplay: 0, autohide: 1, modestbranding: 0, rel: 0, showinfo: 0, controls: 0, disablekb: 1, enablejsapi: 0, iv_load_policy: 3};
+
 var vid = [
         {'videoId': 'TLjmDQ0yhk0', 'startSeconds': 11, 'endSeconds': 262, 'suggestedQuality': 'hd720'},
         {'videoId': 'XjVwA1UKBzA', 'startSeconds': 7, 'endSeconds': 204, 'suggestedQuality': 'hd720'},
@@ -16,10 +17,14 @@ var vid = [
 $('.control em:last-of-type').html(vid.length);
 
 function onYouTubePlayerAPIReady(){
-    tv = new YT.Player('tv', {events: {'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange}, playerVars: playerDefaults});
+    tv = new YT.Player('tv', {
+        events: {'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange}, 
+        playerVars: playerDefaults
+    });
+    console.log('api ready');
 }
 
-function onPlayerReady(){
+function onPlayerReady(function){
     tv.loadVideoById(vid[currVid]);
     tv.mute();
 }
